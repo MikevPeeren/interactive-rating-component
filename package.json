@@ -1,0 +1,40 @@
+{
+  "name": "next-typescript-tailwindcss-sass-starter",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.{html,js}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/react": "^17.0.43",
+    "autoprefixer": "^10.4.4",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.1",
+    "tailwindcss": "^3.0.23"
+  }
+}
