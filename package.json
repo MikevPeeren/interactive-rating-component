@@ -23,7 +23,7 @@
     ]
   },
   "dependencies": {
-    "@remix-run/node": "^1.4.1",
+    "@remix-run/node": "^1.4.3",
     "@remix-run/react": "^1.4.1",
     "@remix-run/vercel": "^1.4.3",
     "@vercel/node": "^1.14.0",
