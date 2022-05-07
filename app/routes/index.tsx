@@ -1,11 +1,16 @@
+import { useState } from "react";
+
 import RatingComponent from "~/components/RatingComponent";
 
 export default function Index() {
+  const [activeRating, setActiveRating] = useState<number>();
+
+  console.log(activeRating);
   return (
     <div className="px-2 bg-veryDarkBlue">
       <div className="py-2 flex flex-1 flex-col justify-center items-center min-h-screen">
         <div
-          className="shadow-lg rounded-3xl p-10 w-1/4 flex flex-col"
+          className="shadow-lg rounded-3xl p-10 w-full sm:w-2/4 md:w-2/4 lg:w-2/5 xl:w-1/4 flex flex-col"
           style={{
             background:
               "radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%)",
@@ -29,17 +34,24 @@ export default function Index() {
             feedback is appreciated to help us improve our offering!
           </p>
 
-          <div className="flex flex-row justify-between mt-6">
-            <RatingComponent content={"1"} />
-            <RatingComponent content={"2"} />
-            <RatingComponent content={"3"} />
-            <RatingComponent content={"4"} />
-            <RatingComponent content={"5"} />
+          <div className="flex flex-row justify-between mt-6 flex-wrap gap-2">
+            {[...Array(5)].map((_item, index) => {
+              return (
+                <RatingComponent
+                  key={index}
+                  content={String(index)}
+                  isActive={activeRating === index}
+                  onClick={() => {
+                    setActiveRating(index);
+                  }}
+                />
+              );
+            })}
           </div>
 
           <button
             type="submit"
-            className="mt-8 text-white bg-orange rounded-3xl p-3 uppercase tracking-widest"
+            className="mt-8 text-white bg-orange rounded-3xl p-3 uppercase tracking-widest hover:bg-white hover:text-orange"
           >
             Submit
           </button>

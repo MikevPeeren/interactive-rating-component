@@ -1,12 +1,26 @@
+import type { MouseEventHandler } from "react";
+
 interface IRatingComponent {
+  key: number;
   content: string;
+  isActive: boolean;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-const RatingComponent = ({ content }: IRatingComponent) => {
+const RatingComponent = ({
+  key,
+  content,
+  isActive,
+  onClick,
+}: IRatingComponent) => {
   return (
     <button
-      className="bg-darkBlue rounded-full text-mediumGrey px-5 py-3"
+      key={key}
+      className={`rounded-full  px-5 py-3 hover:bg-orange hover:text-white ${
+        isActive ? "bg-mediumGrey text-white" : "bg-darkBlue text-mediumGrey"
+      }`}
       type="button"
+      onClick={onClick}
     >
       {content}
     </button>
