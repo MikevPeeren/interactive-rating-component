@@ -1,11 +1,21 @@
 import { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import RatingComponent from "~/components/RatingComponent";
 
 export default function Index() {
   const [activeRating, setActiveRating] = useState<number>();
 
-  console.log(activeRating);
+  const navigate = useNavigate();
+
+  const onSubmit = () => {
+    navigate("../ratingFinished", {
+      replace: true,
+      state: { activeRating },
+    });
+  };
+
   return (
     <div className="px-2 bg-veryDarkBlue">
       <div className="py-2 flex flex-1 flex-col justify-center items-center min-h-screen">
@@ -39,10 +49,11 @@ export default function Index() {
               return (
                 <RatingComponent
                   key={index}
-                  content={String(index)}
-                  isActive={activeRating === index}
+                  keyValue={index}
+                  content={String(index + 1)}
+                  isActive={activeRating === index + 1}
                   onClick={() => {
-                    setActiveRating(index);
+                    setActiveRating(index + 1);
                   }}
                 />
               );
@@ -51,7 +62,8 @@ export default function Index() {
 
           <button
             type="submit"
-            className="mt-8 text-white bg-orange rounded-3xl p-3 uppercase tracking-widest hover:bg-white hover:text-orange"
+            className="mt-8 w-full text-white bg-orange rounded-3xl p-3 uppercase tracking-widest hover:bg-white hover:text-orange"
+            onClick={onSubmit}
           >
             Submit
           </button>

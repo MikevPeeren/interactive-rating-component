@@ -18,7 +18,9 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
-export function ErrorBoundary() {
+//@ts-expect-error
+export function ErrorBoundary({ error }) {
+  console.log(error);
   return (
     <html lang="en">
       <head>
