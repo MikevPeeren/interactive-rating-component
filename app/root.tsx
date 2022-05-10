@@ -18,6 +18,35 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
+export function ErrorBoundary() {
+  return (
+    <html lang="en">
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <div className="w-full flex flex-col items-center justify-center min-h-screen">
+          <h1 className="font-bold text-orange text-9xl mb-6">Error</h1>
+
+          <h2 className="text-2xl font-bold text-center text-lightGrey md:text-3xl mb-20">
+            <span className="text-lightGrey">Oops!</span> Something went wrong
+          </h2>
+
+          <a
+            href="/"
+            className="px-10 py-3 text-sm font-semibold text-white bg-orange uppercase rounded-md"
+          >
+            Go home
+          </a>
+        </div>
+        <Scripts />
+      </body>
+    </html>
+  );
+}
+
 export default function App() {
   return (
     <html lang="en">
