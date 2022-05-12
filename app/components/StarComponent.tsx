@@ -16,7 +16,7 @@ const StarComponent = ({
   return (
     <button
       key={keyValue}
-      className={`rounded-full  px-5 py-3 hover:bg-orange hover:text-white ${
+      className={`rounded-full px-4 sm:px-5 py-2 sm:py-3 hover:bg-orange hover:text-white ${
         isActive ? "bg-mediumGrey text-white" : "bg-darkBlue text-mediumGrey"
       }`}
       type="button"
