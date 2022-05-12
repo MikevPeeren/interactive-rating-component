@@ -20,7 +20,9 @@ export const meta: MetaFunction = () => ({
 
 //@ts-expect-error
 export function ErrorBoundary({ error }) {
+  // For debugging purposes
   console.log(error);
+
   return (
     <html lang="en">
       <head>
