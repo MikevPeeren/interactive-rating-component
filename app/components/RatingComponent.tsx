@@ -29,7 +29,7 @@ const RatingComponent = ({ onSubmit }: IRatingComponent) => {
         appreciated to help us improve our offering!
       </p>
 
-      <div className="flex flex-row justify-between mt-6 flex-wrap gap-2">
+      <div className="flex flex-row justify-between mt-6 flex-wrap">
         {[...Array(5)].map((_item, index) => {
           return (
             <StarComponent
@@ -47,7 +47,7 @@ const RatingComponent = ({ onSubmit }: IRatingComponent) => {
 
       <button
         type="submit"
-        className="mt-8 w-full text-white bg-orange rounded-3xl p-3 uppercase tracking-widest hover:bg-white hover:text-orange"
+        className="mt-8 w-full text-white font-bold bg-orange rounded-3xl p-3 uppercase tracking-widest hover:bg-white hover:text-orange"
         onClick={() => onSubmit(activeRating)}
       >
         Submit
