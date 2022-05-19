@@ -1,22 +1,22 @@
 import type { MouseEventHandler } from "react";
 
-interface IStarComponent {
+interface IRateComponent {
   keyValue: number;
   content: string;
   isActive: boolean;
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-const StarComponent = ({
+const RateComponent = ({
   keyValue,
   content,
   isActive,
   onClick,
-}: IStarComponent) => {
+}: IRateComponent) => {
   return (
     <button
       key={keyValue}
-      className={`rounded-full px-4 sm:px-5 py-2 sm:py-3 hover:bg-orange hover:text-white ${
+      className={`rounded-full w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 hover:bg-orange hover:text-white ${
         isActive ? "bg-mediumGrey text-white" : "bg-darkBlue text-mediumGrey"
       }`}
       type="button"
@@ -27,4 +27,4 @@ const StarComponent = ({
   );
 };
 
-export default StarComponent;
+export default RateComponent;

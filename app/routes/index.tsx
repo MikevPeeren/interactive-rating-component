@@ -14,7 +14,7 @@ export default function Index() {
     <div className="px-4">
       <div className="py-2 flex flex-1 flex-col justify-center items-center min-h-screen">
         <div
-          className="shadow-lg rounded-3xl p-5 md:p-10 w-full sm:w-2/4 md:w-2/4 lg:w-2/5 xl:w-1/4 flex flex-col"
+          className="shadow-lg rounded-3xl p-5 md:p-10 w-full sm:w-2/4 md:w-2/4 lg:w-2/5 xl:w-2/6 2xl:w-1/4 flex flex-col"
           style={{
             background:
               "radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%)",

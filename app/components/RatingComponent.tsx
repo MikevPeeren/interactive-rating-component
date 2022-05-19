@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import StarComponent from "./StarComponent";
+import RateComponent from "./RateComponent";
 
 interface IRatingComponent {
   onSubmit: (arg0: number | undefined) => void;
@@ -32,7 +32,7 @@ const RatingComponent = ({ onSubmit }: IRatingComponent) => {
       <div className="flex flex-row justify-between mt-6 flex-wrap">
         {[...Array(5)].map((_item, index) => {
           return (
-            <StarComponent
+            <RateComponent
               key={index}
               keyValue={index}
               content={String(index + 1)}
