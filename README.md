@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://interactive-rating-component-flax.vercel.app/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/rating-component-remix-run-typescript-tailwind-1b2eCnFcve)
 - Live Site URL: [Website](https://interactive-rating-component-flax.vercel.app/)
 
 ## My process
