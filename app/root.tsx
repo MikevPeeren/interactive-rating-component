@@ -22,7 +22,7 @@ export const meta: MetaFunction = () => ({
 //@ts-expect-error
 export function ErrorBoundary({ error }) {
   // For debugging purposes
-  console.log(error);
+  // console.log(error);
 
   return (
     <html lang="en">
@@ -32,7 +32,7 @@ export function ErrorBoundary({ error }) {
         <Links />
       </head>
       <body>
-        <div className="w-full flex flex-col items-center justify-center min-h-screen">
+        <main className="w-full flex flex-col items-center justify-center min-h-screen">
           <h1 className="font-bold text-orange text-9xl mb-6">Error</h1>
 
           <h2 className="text-2xl font-bold text-center text-lightGrey md:text-3xl mb-20">
@@ -45,7 +45,7 @@ export function ErrorBoundary({ error }) {
           >
             Go home
           </a>
-        </div>
+        </main>
         <Scripts />
       </body>
     </html>
