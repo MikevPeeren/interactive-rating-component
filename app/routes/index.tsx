@@ -11,7 +11,7 @@ export default function Index() {
   };
 
   return (
-    <div className="px-4">
+    <main className="px-4">
       <div className="py-2 flex flex-1 flex-col justify-center items-center min-h-screen">
         <div
           className="shadow-lg rounded-3xl p-5 md:p-10 w-full sm:w-2/4 md:w-2/4 lg:w-2/5 xl:w-2/6 2xl:w-1/4 flex flex-col"
@@ -26,6 +26,6 @@ export default function Index() {
           )}
         </div>
       </div>
-    </div>
+    </main>
   );
 }
