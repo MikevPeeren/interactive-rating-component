@@ -34,7 +34,7 @@
     "@remix-run/dev": "^1.7.1",
     "@remix-run/eslint-config": "^1.7.1",
     "@remix-run/serve": "^1.7.1",
-    "@types/react": "^18.0.17",
+    "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.8",
     "concurrently": "^7.4.0",
